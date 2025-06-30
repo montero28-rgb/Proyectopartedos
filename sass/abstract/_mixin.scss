@@ -1,0 +1,16 @@
+//mixin con parametros y estilos fijos
+@mixin grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+@mixin flex {
+    height: 15vh;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}

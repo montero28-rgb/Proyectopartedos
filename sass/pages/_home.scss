@@ -1,0 +1,62 @@
+//variables
+@import "../abstract/variables";
+//mixin
+@import "../abstract/mixin";
+
+ 
+header {
+    color: $color-tipografia;
+    nav {
+        @include grid;
+    }
+    @include mobile {
+        .login {
+        @include grid;
+        justify-content: center;
+        }
+    }
+        @include tablet {
+        .login {
+        @include grid;
+        justify-content: center
+        
+        }
+    }
+        @include desktop{
+        .login {
+        @include grid;
+       
+        }
+    }
+    }
+    
+main {
+    
+    @include grid;
+    div {
+        img {
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            border-radius: 10px;
+            
+        }
+    }
+}
+
+.container {
+    min-height: 100vh;
+   @include grid;
+   .video {
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            border-radius: 10px;
+        }
+   }
+
+footer{
+    text-align: center;
+    @include grid;
+    min-height: 100dvh;
+}
