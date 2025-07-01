@@ -18,15 +18,20 @@ header {
         @include tablet {
         .login {
         @include grid;
-        justify-content: center
+        justify-content: center;
         
         }
     }
         @include desktop{
         .login {
         @include grid;
+        justify-content: right;
+       }
        
-        }
+          
+        
+        
+       
     }
     }
     
