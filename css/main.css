@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #0e0d0d;
+  background-color: rgb(0, 0, 0);
 }
 
 h1 {
@@ -19,69 +19,55 @@ p {
 }
 
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: whitesmoke;
-}
-header nav {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr auto;
-}
-@media (max-width: 767px) {
-  header .login {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto 1fr auto;
-    justify-content: center;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  header .login {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto 1fr auto;
-    justify-content: center;
-  }
-}
-@media (min-width: 1024px) {
-  header .login {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto 1fr auto;
-    justify-content: right;
-  }
 }
 
 main {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr auto;
+}
+main main .conteiner {
+  height: 80vh;
+  margin: 0 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 25%);
+  gap: 1.5rem;
+  align-content: center;
 }
 main div img {
   width: 100%;
   height: 100%;
-  padding: 30px;
-  border-radius: 10px;
+  margin: 10px;
+  object-fit: cover;
 }
-
-.container {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr auto;
+@media (max-width: 767px) {
+  main .autos1, main .camiones1, main .motos1, main .video {
+    display: none;
+  }
 }
-.container .video {
-  width: 100%;
-  height: 100%;
-  padding: 30px;
-  border-radius: 10px;
+@media (min-width: 768px) and (max-width: 1023px) {
+  main main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 25%);
+  }
+  main .autos1, main .camiones1 {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) and (min-width: 1024px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 25%);
+  }
 }
 
 footer {
-  text-align: center;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100dvh;
+  background-color: rgb(0, 0, 0);
+  color: whitesmoke;
 }
 
 /*# sourceMappingURL=main.css.map */

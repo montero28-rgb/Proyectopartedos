@@ -2,66 +2,73 @@
 @import "../abstract/variables";
 //mixin
 @import "../abstract/mixin";
+//media queries
+@import "../abstract/mediaqueris";
 
  
 header {
+    @include flex;
     color: $color-tipografia;
-    nav {
-        @include grid;
     }
-    @include mobile {
-        .login {
-        @include grid;
-        justify-content: center;
-        }
-    }
-        @include tablet {
-        .login {
-        @include grid;
-        justify-content: center;
-        
-        }
-    }
-        @include desktop{
-        .login {
-        @include grid;
-        justify-content: right;
-       }
-       
-          
-        
-        
-       
-    }
-    }
+    
     
 main {
+    @include grid;
+    main .conteiner {
+    height: 80vh;
+    margin: 0 30px;
+    @include grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 25%);
+    gap: 1.5rem;
+    align-content: center;
+}
+    div img  {
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        object-fit: cover;
+        }
+
     
-    @include grid;
-    div {
-        img {
-            width: 100%;
-            height: 100%;
-            padding: 30px;
-            border-radius: 10px;
-            
+    
+        
+    
+     @include mobile {
+        .autos1, .camiones1, .motos1, .video {
+            display: none;
         }
+     }
+     @include tablet {
+        main {
+            @include grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 25%);
+        }
+        .autos1, .camiones1 {
+            display: none;
+        }
+        
+        @include desktop {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 25%);
+        }
+     }
+        
+     
+    
+       
     }
-}
+    
 
-.container {
-    min-height: 100vh;
-   @include grid;
-   .video {
-            width: 100%;
-            height: 100%;
-            padding: 30px;
-            border-radius: 10px;
-        }
-   }
 
-footer{
-    text-align: center;
-    @include grid;
-    min-height: 100dvh;
-}
+     footer {
+        background-color: $color-primario;
+        color: $color-tipografia;
+        }   
+
+    
+
+
+
+
