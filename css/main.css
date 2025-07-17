@@ -55,6 +55,32 @@ header {
     margin: 15px;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    height: 80vh;
+    margin: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 25%);
+    gap: 2rem;
+    align-content: center;
+  }
+  main div img {
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+    object-fit: cover;
+  }
+  main p {
+    grid-column: span 2;
+  }
+  main table {
+    grid-column: span 2;
+  }
+  .video {
+    display: none;
+  }
+}
 @media (min-width: 1024px) {
   main {
     height: 80vh;
@@ -87,6 +113,9 @@ header {
   }
   main table {
     grid-column: span 2;
+  }
+  .img-6 {
+    display: none;
   }
 }
 footer {

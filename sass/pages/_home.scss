@@ -35,6 +35,32 @@ header {
         }
      }
     
+     @include tablet {
+        main   {
+    height: 80vh;
+    margin: 0 30px;
+    @include grid(grid, repeat(2, 1fr), repeat(2, 25%));
+    gap: 2rem;
+    align-content: center;
+    }
+    main div img  {
+        width: 100%;
+        height: 100%;
+        margin: 15px;
+        object-fit: cover;
+        }
+         main p {
+            grid-column:span 2;
+        }
+        main table {
+            grid-column: span 2;
+        }
+        .video {
+            display: none;
+        }
+        
+        
+     }
         
     @include desktop {
             main   {
@@ -66,6 +92,9 @@ header {
         }
         main table {
             grid-column: span 2;
+        }
+        .img-6 {
+            display: none;
         }
         }
             
